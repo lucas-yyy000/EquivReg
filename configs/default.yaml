@@ -45,13 +45,13 @@ data:
 
 dataloader:
   train:
-    batch_size: 10
-    num_workers: 10
+    batch_size: 3
+    num_workers: 2
   val:
-    batch_size: 10
-    num_workers: 5
+    batch_size: 3
+    num_workers: 2
   vis:
-    batch_size: 12
+    batch_size: 5
 
 trainer:
   angloss_w: 10

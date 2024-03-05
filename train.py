@@ -5,7 +5,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import os
-from torch.utils.tensorboard import SummaryWriter
+# from torch.utils.tensorboard import SummaryWriter
 import logging
 
 import misc
@@ -47,10 +47,10 @@ if __name__ == "__main__":
     
     ### configure checkpoints
     checkpoint_io, epoch_it, it = config.cfg_checkpoint(cfg, out_dir, model, optimizer, lr_scheduler)
-    writer = SummaryWriter(os.path.join(out_dir, 'logs'))
+    # writer = SummaryWriter(os.path.join(out_dir, 'logs'))
     
     ### configure callbacks
-    callback_list, callback_dict = config.cfg_callbacks(cfg, trainer, vis_loader, val_loader, checkpoint_io, writer)
+    callback_list, callback_dict = config.cfg_callbacks(cfg, trainer, vis_loader, val_loader, checkpoint_io, None)
     
     # Shorthands
         
@@ -71,9 +71,9 @@ if __name__ == "__main__":
 
             it += 1
             loss, d_loss = trainer.train_step(batch)
-            writer.add_scalar('train/loss', loss, it)
-            for key in d_loss:
-                writer.add_scalar('train/{}'.format(key), d_loss[key], it)
+            # writer.add_scalar('train/loss', loss, it)
+            # for key in d_loss:
+            #     writer.add_scalar('train/{}'.format(key), d_loss[key], it)
 
             for callback in callback_list:
                 callback_dict[callback](it=it, epoch_it=epoch_it, loss=loss, d_loss=d_loss)

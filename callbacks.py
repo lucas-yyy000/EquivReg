@@ -66,7 +66,7 @@ class ValidationCallback(Callback):
     def do(self, it, epoch_it, *args, **kwds):
         eval_dict = self.trainer.evaluate(self.val_loader)
 
-        for k, v in eval_dict.items():
-            self.writer.add_scalar('val/%s' % k, v, it)
+        # for k, v in eval_dict.items():
+        #     self.writer.add_scalar('val/%s' % k, v, it)
 
         self.checkpoint_io.save_if_best(eval_dict, it=it, epoch_it=epoch_it)
