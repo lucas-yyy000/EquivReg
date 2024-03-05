@@ -13,7 +13,7 @@ The preprocessed ModelNet40 dataset can be downloaded at this [Google Drive link
 Examples are given in the files `run_train.sh` and `run_test.sh`. 
 
 ## Citation
-If this work is helpful for your research, please consider citing our work: 
+If this work is helpful for your research, please consider citing the original authors' work: 
 ```
 @inproceedings{zhu2022correspondence,
   title={Correspondence-free point cloud registration with SO (3)-equivariant implicit shape representations},
