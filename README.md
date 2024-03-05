@@ -2,7 +2,7 @@
 Official repo for CoRL 2021 paper **Correspondence-Free Point Cloud Registration with SO(3)-Equivariant Implicit Shape Representations** [(link)](https://proceedings.mlr.press/v164/zhu22b.html)
 
 ## Environment
-Aftae creating a virtual environment, do:
+After creating a virtual environment, inside the virtual environment, do:
 1. `python setup.py build_ext --inplace`
 2. Install [torch-batch-svd](https://github.com/KinglittleQ/torch-batch-svd)
 
